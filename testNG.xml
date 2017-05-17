@@ -1,0 +1,11 @@
+<suite name="Page Object Model Demo Test Suite"
+       thread-count="8" configfailurepolicy="continue">
+    <test name="JavaPOMTest" parallel="classes">
+        <classes>
+            <class name="ChangeUserNameTest">
+            </class>
+            <class name="EditShoppingCartTest">
+            </class>
+        </classes>
+    </test>
+</suite>
