@@ -8,6 +8,8 @@ import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 import Utilities.*;
 
+import java.io.FileNotFoundException;
+
 //Tests done Sequentially rather than independently due to a lack of API to inject users
 public class ChangeUserNameTest extends BuildTest {
 
@@ -59,7 +61,7 @@ public class ChangeUserNameTest extends BuildTest {
         //Verify the Update Personal Info Form is displayed
         Assert.assertTrue(pageContainer.userInfoPage().updateForm().isDisplayed());
         //Update User Name
-        pageContainer.userInfoPage().fillForm(user.name2, false);
+        pageContainer.userInfoPage().fillForm(user.name2, user.passwd, false);
         pageContainer.userInfoPage().saveBtn().click();
     }
     @Test(priority = 4)
@@ -74,8 +76,8 @@ public class ChangeUserNameTest extends BuildTest {
         Assert.assertTrue(pageContainer.userAcctPage().activeUser().getText().equals(user.name2));
     }
     @AfterTest
-    public void teardown() {
-        test.resetUser(pageContainer, user.name);
+    public void teardown(){
+        test.resetUser(pageContainer, user.name, user.passwd);
         test.quit(pageContainer);
     }
 }

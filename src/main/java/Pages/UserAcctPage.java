@@ -19,11 +19,11 @@ public class UserAcctPage {
     public WebElement activeUser(){
         return _driver.findElement(By.cssSelector("div.header_user_info"));
     }
-    public WebElement userInfoBtn(){ return _driver.findElement(By.cssSelector("a[href$=\"identity\"]")); }
+    public WebElement userInfoBtn(){ return _driver.findElement(By.cssSelector("a[href$='identity']")); }
     public WebElement logoutBtn(){
         return _driver.findElement(By.cssSelector("a.logout"));
     }
-    public WebElement dressesBtn() { return _driver.findElement(By.xpath("//*[@id=\"block_top_menu\"]/ul/li[2]/a")); }
-    public WebElement shoppingCartBtn(){ return _driver.findElement(By.cssSelector("a[href$=\"order\"]")); }
+    public WebElement dressesBtn() { return _driver.findElement(By.xpath("//*[@id='block_top_menu']/ul/li[2]/a")); }
+    public WebElement shoppingCartBtn(){ return _driver.findElement(By.cssSelector("a[href$='order']")); }
 
 }

@@ -1,12 +1,12 @@
 [TestNG] Running:
   E:\IdeaProjects\CodingPractice\PageObjectModelDemo\testNG.xml
-Starting ChromeDriver 2.29.461591 (62ebf098771772160f391d75e589dc567915b233) on port 23973
+Starting ChromeDriver 2.29.461591 (62ebf098771772160f391d75e589dc567915b233) on port 39270
 Only local connections are allowed.
-May 17, 2017 11:51:41 AM org.openqa.selenium.remote.ProtocolHandshake createSession
+May 22, 2017 8:04:57 PM org.openqa.selenium.remote.ProtocolHandshake createSession
 INFO: Detected dialect: OSS
-Starting ChromeDriver 2.29.461591 (62ebf098771772160f391d75e589dc567915b233) on port 32702
+Starting ChromeDriver 2.29.461591 (62ebf098771772160f391d75e589dc567915b233) on port 31843
 Only local connections are allowed.
-May 17, 2017 11:51:58 AM org.openqa.selenium.remote.ProtocolHandshake createSession
+May 22, 2017 8:05:20 PM org.openqa.selenium.remote.ProtocolHandshake createSession
 INFO: Detected dialect: OSS
 
 ===============================================

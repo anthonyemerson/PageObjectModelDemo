@@ -23,7 +23,7 @@ public class DressPage {
     public WebElement categoryHeader() { return _driver.findElement(By.cssSelector("span.category-name")); }
     public WebElement addDressNumber6(){ return _driver.findElement(By.cssSelector("a[href*=" +
             "\"cart&add=1&id_product=6\"]")); }
-    public WebElement shoppingCartBtn(){ return _driver.findElement(By.cssSelector("a[href$=\"order\"]")); }
+    public WebElement shoppingCartBtn(){ return _driver.findElement(By.cssSelector("a[href$='order']")); }
 
     public WebElement addToCartPopUpMessage() {
         return addToCartPopUp().findElement(By.cssSelector("#layer_cart > div.clearfix >" +

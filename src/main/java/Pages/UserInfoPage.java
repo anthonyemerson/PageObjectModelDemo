@@ -1,6 +1,5 @@
 package Pages;
 
-import Utilities.User;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -9,7 +8,7 @@ import org.openqa.selenium.WebElement;
  * Created by Anthony Emerson on 5/9/2017.
  */
 public class UserInfoPage {
-    private User _user = new User();
+
     private WebDriver _driver;
 
     public UserInfoPage(WebDriver driver){
@@ -42,17 +41,16 @@ public class UserInfoPage {
         return _driver.findElement(By.cssSelector("p.alert.alert-success"));
     }
     public WebElement userAcctBtn(){
-        return _driver.findElement(By.cssSelector("a[href$=\"my-account\"]"));
+        return _driver.findElement(By.cssSelector("a[href$='my-account']"));
     }
 
-    public void fillForm(String userName, boolean male){
+    public void fillForm(String userName, String passwd,  boolean male){
         if (male){mrBtn().click();}
         else{mrsBtn().click();}
-
         this.firstNameField().clear();
         this.firstNameField().sendKeys(userName.substring(0, userName.indexOf(" ")));
         this.lastNameField().clear();
         this.lastNameField().sendKeys(userName.substring(userName.indexOf(" ")+1));
-        this.passwdField().sendKeys(_user.passwd);
+        this.passwdField().sendKeys(passwd);
     }
 }

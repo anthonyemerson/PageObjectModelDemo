@@ -83,8 +83,8 @@ public class EditShoppingCartTest extends BuildTest {
     public void verify_dress_removed_from_user_shopping_cart(){
         //remove the dress from user shopping cart
         pageContainer.shoppingCartPage().deleteBtn().click();
-        //return to the shopping cart page
-        pageContainer.userAcctPage().shoppingCartBtn().click();
+        //wait for the shopping cart alert to appear
+        pageContainer.shoppingCartPage().waitForAlert();
         //Verify that the user's shopping cart is empty
         Assert.assertTrue(pageContainer.shoppingCartPage().emptyCartAlert().getText().contains("empty"));
     }
